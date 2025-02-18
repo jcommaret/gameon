@@ -1,6 +1,7 @@
 import { Header } from "./components/header";
 import { Hero } from "./components/hero";
 import { Modal } from "./components/modal";
+
 import "./style/main.scss";
 
 function App() {
