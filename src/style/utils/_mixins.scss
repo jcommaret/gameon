@@ -1,23 +1,23 @@
+@use "sass:map";
 @use "breakpoints" as b;
 
 @mixin mdesktop {
-    @media screen and (max-width: map-get(b.$breakpoints, mdesktop)){
-        @content;
-    }
+  @media screen and (max-width: map.get(b.$breakpoints, "mdesktop")) {
+    @content;
+  }
 }
 
-@mixin hideandshow{
-    &.hide{
-        display:block;
-        animation-name: hide;
-        animation-duration: 0.5s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
+@mixin hideandshow {
+  & {
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in-out forwards;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
     }
-    &.open{
-        display: block;
-        animation-name: open;
-        animation-duration: 0.5s;
-        animation-timing-function: ease-in-out;
+    100% {
+      opacity: 1;
     }
+  }
 }
