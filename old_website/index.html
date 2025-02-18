@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>GameOn - Reservation</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <!--Top Nav-->
+    
+    <div class="topnav">
+      <!--Logo-->
+      <div class="topnav-header-logo">
+        <img alt="logo" src="img/logo.png" />
+      </div>
+      <!-- Menu -->
+      <div class="topnav-menu">  
+        <a href="#" class="active"><span>Détails de l'évènement</span></a>
+        <a href="#"><span>À propos</span></a>
+        <a href="#"><span>Contact</span></a>
+        <a href="#"><span>Évènements passés</span></a>
+      </div>
+      <!--Menu Opener-->
+      <a href="javascript:void(0);" class="icon" onclick="Nav()"><i class="fa fa-bars"></i></a>
+    </div>
+    <!--End Top Nav-->
+    
+    <main>
+      <div class="hero-section">
+        <!--Texte + Buttons-->
+        <div class="hero-content">
+          <h1 class="hero-headline">Marathon national<br>de jeux vidéos</h1>
+          <p class="hero-text">Vous aimez jouer ? Notre prochain évènement gaming est ouvert aux réservations... Places limitées !</p>
+          <button class="btn btn-signup modal-toogle">je m'inscris</button>
+        </div>
+        
+        <!--Hero-->
+        <div class="hero-img">
+          <img src="img/background.jpg" alt="img" />
+        </div>
+        
+        <!--Btn-->
+        <button class="btn btn-signup modal-toogle">je m'inscris</button>
+      
+      </div>
+    </main>
+
+    <footer>
+      <!-- Copyrights -->
+      <p class="copyrights">
+        Copyright 2014 - 2022, GameOn Inc.
+      </p>
+    </footer>
+    
+    <div class="modal">
+      <div class="modal-content">
+        <span class="btn-close modal-toogle"></span>
+        <div class="modal-body">
+          <form id="signup" name="reservation">
+            <div class="formData">
+              <label for="firstname">Prénom</label><br>
+              <input class="text-control" type="text" id="firstname" name="firstname"/><br>
+              <small></small>
+            </div>
+            
+            <div class="formData">
+              <label for="lastname">Nom</label><br>
+              <input class="text-control" type="text" id="lastname" name="lastname"/><br>
+              <small></small>
+            </div>
+            <div class="formData">
+              <label for="email">E-mail</label><br>
+              <input class="text-control" type="text" id="email" name="email" /><br>
+              <small></small>
+            </div>
+            
+            <div class="formData">
+              <label for="birthdate">Date de naissance</label><br>
+              <input class="text-control" type="date" id="birthdate" name="birthdate"/><br>
+              <small></small>
+            </div>
+            
+            <div class="formData">
+              <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
+              <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+              <small></small>
+            </div>
+            
+            <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
+            
+            <div class="formData">
+              <input class="checkbox-input" type="radio" id="location1" name="location" value="New York"/>
+              <label class="checkbox-label" for="location1"><span class="checkbox-icon"></span>New York</label>
+              
+              <input class="checkbox-input" type="radio" id="location2" name="location" value="San Francisco" />
+              <label class="checkbox-label" for="location2"><span class="checkbox-icon"></span>San Francisco</label>
+              
+              <input class="checkbox-input" type="radio" id="location3" name="location" value="Seattle" />
+              <label class="checkbox-label" for="location3"><span class="checkbox-icon"></span>Seattle</label>
+              
+              <input class="checkbox-input" type="radio" id="location4" name="location" value="Chicago" />
+              <label class="checkbox-label" for="location4"><span class="checkbox-icon"></span>Chicago</label>
+              
+              <input class="checkbox-input" type="radio" id="location5" name="location" value="Boston" />
+              <label class="checkbox-label" for="location5"><span class="checkbox-icon"></span>Boston</label>
+
+              <input class="checkbox-input" type="radio" id="location6" name="location" value="Portland" />
+              <label class="checkbox-label" for="location6"><span class="checkbox-icon"></span>Portland</label>
+              <br/>
+              <small></small>
+            </div>
+
+            <div class="formData">
+              <input class="checkbox-input" type="checkbox" id="checkbox1" />
+              <label class="checkbox2-label" for="checkbox1">
+                <span class="checkbox-icon"></span>
+                J'ai lu et accepté les conditions d'utilisation.
+              </label>
+              <br/>
+              <small></small>
+            </div>
+           
+            <br> 
+            
+            <div class="formData">
+              <input class="checkbox-input" type="checkbox" id="checkbox2" />
+              <label class="checkbox2-label" for="checkbox2">
+                <span class="checkbox-icon"></span>
+                Je souhaite être prévenu des prochains évènements.
+              </label><br>
+              <small></small>
+            </div>
+
+            <div class="center-flex">
+              <input class="btn btn-submit " type="submit" value="C'est parti">
+            </div>
+
+          </form>
+
+          <div id="thanks">
+            <div class="thanks-modal">
+              <p>Merci pour votre inscription</p>
+              <input class="btn btn-submit modal-toogle" value="Fermer">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  
+    <script src="js/nav.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/form.js"></script>
+
+  </body>
+</html>
