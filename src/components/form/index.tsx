@@ -31,7 +31,12 @@ export const Form = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<FormInputs>({
-    resolver: yupResolver(formSchema),
+    resolver: yupResolver<FormInputs>(formSchema),
+    defaultValues: {
+      acceptTerms: false,
+      newsletter: false,
+      quantity: 0,
+    },
   });
 
   const onSubmit = (data: FormInputs) => {
