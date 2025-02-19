@@ -1,9 +1,9 @@
-import { useStore } from "../../store/useStore";
 import backgroundImage from "../../assets/img/background.jpg";
+import { Button } from "../button";
+
+import "./index.scss";
 
 export const Hero = () => {
-  const openModal = useStore((state) => state.openModal);
-
   return (
     <div className="hero-section">
       <div className="hero-content">
@@ -16,16 +16,12 @@ export const Hero = () => {
           Vous aimez jouer ? Notre prochain évènement gaming est ouvert aux
           réservations... Places limitées !
         </p>
-        <button className="btn btn-signup" onClick={openModal}>
-          je m'inscris
-        </button>
+        <Button />
       </div>
       <div className="hero-img">
         <img src={backgroundImage} alt="Gaming event" />
       </div>
-      <button className="btn btn-signup mobile-signup" onClick={openModal}>
-        je m'inscris
-      </button>
+      <Button />
     </div>
   );
 };

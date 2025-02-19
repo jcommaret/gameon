@@ -1,6 +1,6 @@
-@use "../utils/fonts" as f;
-@use "../utils/colors" as c;
-@use "../utils/mixins" as m;
+@use "../../style/utils/fonts" as f;
+@use "../../style/utils/colors" as c;
+@use "../../style/utils/mixins" as m;
 
 .modal {
   display: none;

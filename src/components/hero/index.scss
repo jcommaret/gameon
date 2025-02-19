@@ -1,27 +1,27 @@
-@use "../utils/fonts" as f;
-@use "../utils/colors" as c;
-@use "../utils/mixins" as m;
+@use "../../style/utils/fonts" as f;
+@use "../../style/utils/colors" as c;
+@use "../../style/utils/mixins" as m;
 
-.hero{
-  &-section{
+.hero {
+  &-section {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 7px 2px rgba(0, 0, 0, 0.2);
     margin-bottom: 10px;
-    @include m.mdesktop{
+    @include m.mdesktop {
       margin-top: 90px;
       display: block;
-		  box-shadow: unset;
-      overflow:visible;
+      box-shadow: unset;
+      overflow: visible;
     }
     > .btn-signup {
       display: none;
-      @include m.mdesktop{
+      @include m.mdesktop {
         display: block;
-			  margin: 32px auto 10px;
-			  padding: 12px 35px;
+        margin: 32px auto 10px;
+        padding: 12px 35px;
       }
     }
   }
@@ -33,29 +33,29 @@
     position: relative;
     text-align: left;
     min-width: 424px;
-    @include m.mdesktop{
+    @include m.mdesktop {
       background: c.$white;
       color: c.$black;
-      padding: 20px;  
+      padding: 20px;
     }
     &::after {
-        content: "";
-        width: 100%;
-        height: 100%;
-        background: c.$grey;
-        position: absolute;
-        right: -80px;
-        top: 0;
-        @include m.mdesktop {
-          content: unset;
-        }
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: c.$grey;
+      position: absolute;
+      right: -80px;
+      top: 0;
+      @include m.mdesktop {
+        content: unset;
+      }
     }
-    
+
     > * {
       position: relative;
       z-index: 1;
     }
-    @include m.mdesktop{
+    @include m.mdesktop {
       .btn-signup {
         display: none;
       }
@@ -65,7 +65,7 @@
     font-size: 6rem;
     font-weight: normal;
     white-space: nowrap;
-    @include m.mdesktop{
+    @include m.mdesktop {
       font-size: 4.5rem;
       white-space: normal;
     }
@@ -75,19 +75,19 @@
     font-weight: normal;
     margin-top: 57px;
     padding: 0;
-    @include m.mdesktop{
+    @include m.mdesktop {
       width: unset;
       font-size: 1.5rem;
     }
   }
   &-img {
     grid-column: span 8;
-    & img{
+    & img {
       min-width: 100%;
       height: 100%;
       display: block;
-      padding: 0;    
-      @include m.mdesktop{
+      padding: 0;
+      @include m.mdesktop {
         border-radius: 10px;
         margin-top: 40px;
       }

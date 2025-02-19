@@ -1,6 +1,8 @@
 import { useStore } from "../../store/useStore";
 import { Form } from "../form";
 
+import "./index.scss";
+
 export const Modal = () => {
   const { isModalOpen, isSubmitted, closeModal } = useStore();
 
