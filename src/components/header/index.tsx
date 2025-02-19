@@ -1,5 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+
 import logo from "../../assets/img/logo.png";
 
 import "./index.scss";
@@ -14,26 +18,26 @@ export const Header = () => {
   return (
     <div className="topnav">
       <div className="topnav-header-logo">
-        <Link to="/">
+        <NavLink to="/">
           <img alt="logo" src={logo} />
-        </Link>
+        </NavLink>
       </div>
       <div className={`topnav-menu ${isMenuOpen ? "open" : ""}`}>
-        <Link to="/" className="active">
+        <NavLink to="/">
           <span>Détails de l'évènement</span>
-        </Link>
-        <Link to="/about">
+        </NavLink>
+        <NavLink to="/about">
           <span>À propos</span>
-        </Link>
-        <Link to="/contact">
+        </NavLink>
+        <NavLink to="/contact">
           <span>Contact</span>
-        </Link>
-        <Link to="/events">
+        </NavLink>
+        <NavLink to="/events">
           <span>Évènements passés</span>
-        </Link>
+        </NavLink>
       </div>
       <button className="icon" onClick={toggleNav}>
-        <i className="fa fa-bars"></i>
+        <FontAwesomeIcon icon={faBars} />
       </button>
     </div>
   );

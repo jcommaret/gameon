@@ -63,17 +63,23 @@
       @include m.hideandshow;
     }
   }
-  a.icon {
+  .icon {
     color: c.$red;
-    padding: 8px;
-    border-radius: 8px;
-    &:hover {
-      background-color: c.$red;
-      color: #fff;
-    }
     display: none;
-    @include m.mdesktop {
-      display: block;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 10px;
+    color: inherit;
+
+    @media screen and (max-width: 968px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
+  }
+  .fa-bars {
+    color: c.$red;
+    font-size: 1.5rem;
   }
 }
