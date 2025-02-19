@@ -1,0 +1,15 @@
+@use "../../style/utils/colors" as c;
+@use "sass:color";
+
+.btn {
+  background: c.$red;
+  padding: 1rem 2rem;
+  color: c.$white;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    background: color.scale(c.$red, $lightness: -10%);
+  }
+}

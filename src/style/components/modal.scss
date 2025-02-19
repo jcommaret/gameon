@@ -1,0 +1,31 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 3000;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &.open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+#thanks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .thanks-modal {
+    text-align: center;
+    font-size: 36px;
+
+    .btn-submit {
+      margin-top: 2rem;
+    }
+  }
+}

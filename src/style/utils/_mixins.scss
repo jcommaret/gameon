@@ -12,6 +12,11 @@
     opacity: 0;
     animation: fadeIn 0.3s ease-in-out forwards;
   }
+
+  @media screen and (max-width: map.get(b.$breakpoints, "mdesktop")) {
+    @content;
+  }
+
   @keyframes fadeIn {
     0% {
       opacity: 0;
