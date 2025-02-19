@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 import logo from "../../assets/img/logo.png";
 
 import "./index.scss";
@@ -14,25 +14,27 @@ export const Header = () => {
   return (
     <div className="topnav">
       <div className="topnav-header-logo">
-        <img alt="logo" src={logo} />
+        <Link to="/">
+          <img alt="logo" src={logo} />
+        </Link>
       </div>
       <div className={`topnav-menu ${isMenuOpen ? "open" : ""}`}>
-        <a href="#" className="active">
+        <Link to="/" className="active">
           <span>Détails de l'évènement</span>
-        </a>
-        <a href="#">
+        </Link>
+        <Link to="/about">
           <span>À propos</span>
-        </a>
-        <a href="#">
+        </Link>
+        <Link to="/contact">
           <span>Contact</span>
-        </a>
-        <a href="#">
+        </Link>
+        <Link to="/events">
           <span>Évènements passés</span>
-        </a>
+        </Link>
       </div>
-      <a href="#" className="icon" onClick={toggleNav}>
+      <button className="icon" onClick={toggleNav}>
         <i className="fa fa-bars"></i>
-      </a>
+      </button>
     </div>
   );
 };
